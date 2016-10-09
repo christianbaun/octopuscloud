@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+{{ input_error_message }}
+
+<p>&nbsp;</p>
+
+{{ redundanz_warnung }}
+
+{{ synchron_warnung }}
+
+<b>Datei hochladen</b>
+
+{{ keys_upload_formular }}
+
+<p>&nbsp;</p>
+
+<b>Liste der Keys</b>
+
+<p>&nbsp;</p>
+
+{{ bucket_keys_tabelle }}
+
+{{ alle_keys_loeschen_button }}
+
+<p>&nbsp;</p>
+
+{{ iframe }}
+
+{% endblock %}

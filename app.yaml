@@ -1,0 +1,36 @@
+application: cloudoctopus-hrd
+version: 2
+runtime: python
+api_version: 1
+
+handlers:
+- url: /favicon.ico
+  static_files: favicon/favicon.ico
+  upload: favicon/favicon.ico
+  
+- url: /upload.js
+  static_files: upload.js
+  upload: upload.js
+  
+- url: /jquery.min.js
+  static_files: jquery.min.js
+  upload: jquery.min.js
+
+- url: /jquery.blockUI.js
+  static_files: jquery.blockUI.js
+  upload: jquery.blockUI.js
+  
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt
+
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /bilder
+  static_dir: bilder
+  
+- url: /.*
+  script: octopus.py
+
+

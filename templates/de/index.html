@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<b>Zug&auml;nge and Regionen</b>
+
+<p>&nbsp;</p>
+
+{{ tabelle_logins }}
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<b>Pers&ouml;nliche Daten in Octopus l&ouml;schen</b>
+
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr>
+    <td align="center">
+      <form action="/persoenliche_datan_loeschen" method="get">
+        <input type="submit" value="Alle Ihre pers&ouml;nliche Daten aus Octopus l&ouml;schen">
+      </form>
+    </td>
+  </tr>
+</table>
+
+<b>Neuen Zugang zu einer Region eintragen</b>
+
+<p>&nbsp;</p>
+
+<p><font color="green">Hier k&ouml;nnen Sie ihre Zugangsdaten in Octopus eintragen</font></p>
+
+<p>&nbsp;</p>
+
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr>
+    <td align="center" valign="middle">
+      <a href="http://aws.amazon.com"><b>Amazon S3</b></a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="http://open.eucalyptus.com"><b>Eucalyptus Walrus</b></a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="http://code.google.com/apis/storage/"><b>Google Storage</b></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="ec2">
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="eucalyptus">
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+    <td align="center">
+      <form action="/regionen" method="get">
+        <input type="hidden" name="neuerzugang" value="googlestorage">
+        <input type="submit" value="Zugang einrichten">
+      </form>
+    </td>
+  </tr>
+</table>
+
+{{ eingabefelder }}
+
+{{ input_error_message }}
+
+{{ port_warnung }}
+
+{% endblock %}

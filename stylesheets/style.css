@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color:#F8F8FF;
+  font-size:80%;
+  height: 100%;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+p, li {
+  font-weight: normal;
+}
+
+A:link {
+  text-decoration: none;
+  color: black;
+}
+
+A:visited {
+  text-decoration: none;
+  color: black;
+}
+
+A:active {
+  text-decoration: none;
+  color: black;
+}
+
+A:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+bg {
+  background-image: url(../bilder/cloud_bg.jpg);
+  background-color:orange;
+  width:2024px;height:160px;
+  border:1px solid red;
+/*  padding:20px;*/
+}
+
+/* Titelzeile */
+#head {
+  height: 60px;
+  background-color:#FFFFFF;
+  background-image: url(../bilder/octopus_bg.png);
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#head h1 {
+  margin: 0;
+}
+
+
+#navigationsBar {
+  width: 100%;
+  background-color:#D4D4D4;
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  float: left;
+  text-align: left;
+/*   border: 5px solid #F8F8FF; */
+}
+
+#innerNavigationsBar {
+  width: 97%;
+  background-color:#D4D4D4;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  float: left;
+  text-align: left;
+/*   border: 5px solid #F8F8FF; */
+}
+
+#mainContent {
+  width: 100%;
+  height:100%;
+  background-color:#F8F8FF;
+  float: left;
+  text-align: left;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px; 
+}
+
+#innerMainContent {
+  width: 97%;
+  height:100%;
+  background-color:#F8F8FF;
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#content {
+  width: 75%;
+  float: right;
+}
+

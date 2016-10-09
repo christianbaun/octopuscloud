@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+<h3>
+<b>Access Control List</b>
+</h3>
+
+<p>&nbsp;</p>
+
+<table border="1" cellspacing="0" cellpadding="5">
+<tr>
+<td><b>Key:</b></td>
+<td>{{ keyname }}</td>
+</tr>
+<tr>
+<td><b>MD5:</b></td>
+<td>{{ md5hash }}</td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+{{ acl_tabelle}}
+
+<p>&nbsp;</p>
+
+<h3>
+<b>Chance Access Control List</b>
+</h3>
+
+<p>&nbsp;</p>
+
+<form action="/acl_aendern" method="post" accept-charset="utf-8">
+<input type="hidden" name="keyname" value="{{ keyname }}">
+<input type="hidden" name="md5hash" value="{{ md5hash }}">
+<select name="canned_acl" size="1">
+<option selected="selected">public-read</option>
+<option>private</option>
+<option>public-read-write</option>
+<option>authenticated-read</option>
+</select>
+<input type="submit" value="submit changes">
+</form>
+
+<p>&nbsp;</p>
+
+
+{% endblock %}

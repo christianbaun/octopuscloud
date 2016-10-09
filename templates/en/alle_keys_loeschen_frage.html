@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<p>&nbsp;</p>
+
+Are you absolutely sure, you want to erase <b>all</b> keys?
+
+<table border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td align="center">
+<form action="/alle_keys_loeschen_definitiv" method="get">
+<input type="submit" value="yes! erase all keys">
+</form>
+</td>
+<td align="center">
+<form action="/s3" method="get">
+<input type="submit" value="no">
+</form>
+</td>
+</tr>
+</table>
+
+{% endblock %}

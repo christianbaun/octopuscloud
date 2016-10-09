@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block sideBarContent %}
+
+<p>&nbsp;</p>
+
+Sind sie ganz sicher, dass Sie <b>alle</b> Ihre Keys l&ouml;schen wollen?
+
+<table border="0" cellspacing="5" cellpadding="5">
+<tr>
+<td align="center">
+<form action="/alle_keys_loeschen_definitiv" method="get">
+<input type="submit" value="Ja! Alle Keys l&ouml;schen">
+</form>
+</td>
+<td align="center">
+<form action="/s3" method="get">
+<input type="submit" value="Nein">
+</form>
+</td>
+</tr>
+</table>
+
+{% endblock %}

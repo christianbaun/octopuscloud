@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /favicon/
+Disallow: /stylesheets/
+Disallow: /bilder/
+Disallow: /boto/
+Disallow: /dateutil/

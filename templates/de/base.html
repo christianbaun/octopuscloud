@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Octopus Cloud Speicher System</title>
+<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18815004-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+{{ ajax_formular }}
+
+</head>
+<body {{ bodycommand }}>
+
+<div id="head">
+
+<table width="100%" border="0">
+<tr>
+<td width="120"><h3>
+<a href="{{ url }}">{{ url_linktext }}</a></h3></td>
+<td ALIGN="center">&nbsp; {{ hint }} &nbsp;</td>
+<td ALIGN="right" width="120">
+<a href="/sprache?lang=de" title="Deutsch"><img src="bilder/german.png" width="37" height="20" border="0" alt="Deutsch"></a>
+<a href="/sprache?lang=en" title="Englisch"><img src="bilder/english.png" width="37" height="20" border="0" alt="English"></a>
+</td>
+</tr>
+</table>
+</div>
+
+
+
+{{ javascript_funktion }}
+
+  <div id="navigationsBar">
+  <div id="innerNavigationsBar">
+  <h3>
+{{ navigations_bar }}
+  </h3>
+  </div>
+  </div>
+
+
+  <div id="mainContent">
+<!-- 	<div id="sideBarContent"> -->
+
+  <div id="innerMainContent">
+	{% block sideBarContent %}
+	{%  endblock %}
+
+  </div>
+<!--         </div> -->
+  </div>
+</body>
+</html>
