@@ -1,17 +1,16 @@
-# octopuscloud
+# Octopus Cloud Storage System
 
-The [Octopus Cloud Storage System](http://cloudoctopus.appspot.com/) is a software service, designed to provide a high-availability cloud-based storage solution.
+The [Octopus](http://cloudoctopus.appspot.com/) is a software service, designed to provide a high-availability cloud-based storage solution.
 
 Several different S3-compatible public and private cloud storage services exist:
 
 - [Amazon S3](http://aws.amazon.com/s3/)
-- Google Storage
+- [Google Cloud Storage](https://cloud.google.com/storage/)
 - Connectria Cloud Storage
 - Host Europe Cloud Storage
-- Walrus (Eucalyptus)
-- Cumulus (Nimbus)
-- Swift (OpenStack)
-- Cloud Storage
+- [Walrus (Eucalyptus)](https://github.com/eucalyptus/eucalyptus)
+- [Cumulus (Nimbus)](https://github.com/nimbusproject/nimbus)
+- [Swift (OpenStack)](https://github.com/openstack/swift)
 
 Octopus' aim is to support all available S3-compatible services. Support for S3 and Walrus is implemented now.
 
