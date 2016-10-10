@@ -28,7 +28,9 @@ Octopus' aim is to support all available S3-compatible services. Support for S3 
 
 The software is still under development. See the list of already implemented features.
 
-[comment]: <> (**Web site of Octopus:** [http://cloudoctopus.appspot.com](http://cloudoctopus.appspot.com))
+<!---
+**Web site of Octopus:** [http://cloudoctopus.appspot.com](http://cloudoctopus.appspot.com)
+--> 
 
 # Publications
 
