@@ -6,11 +6,11 @@ Several different S3-compatible public and private cloud storage services exist:
 
 - [Amazon S3](http://aws.amazon.com/s3/)
 - [Google Cloud Storage](https://cloud.google.com/storage/)
-- Connectria Cloud Storage
-- Host Europe Cloud Storage
 - [Walrus (Eucalyptus)](https://github.com/eucalyptus/eucalyptus)
 - [Cumulus (Nimbus)](https://github.com/nimbusproject/nimbus)
 - [Swift (OpenStack)](https://github.com/openstack/swift)
+- [Connectria Cloud Storage](https://www.mh.connectria.com/rp/order/cloud_storage_index) (** it is unclear if this service is still available**)
+- [Host Europe Cloud Storage](http://www.hosteurope.de/produkte/cloud-storage) (**This service is defunct since end 2014**)
 
 Octopus' aim is to support all available S3-compatible services. Support for S3 and Walrus is implemented now.
 
