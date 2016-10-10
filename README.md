@@ -18,8 +18,9 @@ Several different S3-compatible public and private cloud storage services exist:
 - [Cloudian](http://www.cloudian.com/)
 - [Dunkel Cloud Storage](https://www.dunkel.de/s3)
 - [Connectria Cloud Storage](https://www.mh.connectria.com/rp/order/cloud_storage_index) (**It is unclear if this service is still available**)
-- [Nirvanix](http://www.information-age.com/cloud-adoption-to-soar-as-businesses-pursue-innovation-idc-predicts-123457322/) (**This service is defunct since September 2013**)
+- [HP Helion Public cloud](http://fortune.com/2015/10/21/hp-public-cloud/) (**This service is defunct since January 2016**)
 - [Host Europe Cloud Storage](http://www.hosteurope.de/produkte/cloud-storage) (**This service is defunct since end 2014**)
+- [Nirvanix](http://www.information-age.com/cloud-adoption-to-soar-as-businesses-pursue-innovation-idc-predicts-123457322/) (**This service is defunct since September 2013**)
 
 Octopus' aim is to support all available S3-compatible services. Support for S3 and Walrus is implemented now.
 
