@@ -7,22 +7,22 @@ The following table provides some information about some of the existing S3-comp
 | Service | Public/Private Cloud | Note |
 | ------- | -------------------- | ---- |
 | [Amazon S3](http://aws.amazon.com/s3/) | Public | |
-| [Google Cloud Storage](https://cloud.google.com/storage/) | Public |  |
-| [Walrus (Eucalyptus)](https://github.com/eucalyptus/eucalyptus) | Private | |
-| [pWalrus](http://www.pdl.cmu.edu/pWalrus/) | Private | |
-| [Cumulus (Nimbus)](https://github.com/nimbusproject/nimbus) | Private | |
-| [Swift (OpenStack)](https://github.com/openstack/swift) | Private | |
-| [Riak Cloud Storage](https://github.com/basho/riak_cs) | Private | |
-| [Minio](https://github.com/minio/minio) | Private | |
-| [Ceph](http://ceph.com/) | Private | |
-| [Apache CloudStack](https://cloudstack.apache.org/) | Private | |
-| [S3ninja](https://github.com/scireum/s3ninja) | Private | |
 | [Cloudian](http://www.cloudian.com/) | Public |  |
-| [Dunkel Cloud Storage](https://www.dunkel.de/s3) | Public |  |
 | [Connectria Cloud Storage](https://www.mh.connectria.com/rp/order/cloud_storage_index) | Public | It is unclear if this service is still available |
-| [HP Helion Public cloud](http://fortune.com/2015/10/21/hp-public-cloud/) | Public | Defunct since January 2016 |
+| [Dunkel Cloud Storage](https://www.dunkel.de/s3) | Public |  |
+| [Google Cloud Storage](https://cloud.google.com/storage/) | Public |  |
 | [Host Europe Cloud Storage](http://www.hosteurope.de/produkte/cloud-storage) | Public | Defunct since end 2014 |
+| [HP Helion Public cloud](http://fortune.com/2015/10/21/hp-public-cloud/) | Public | Defunct since January 2016 |
 | [Nirvanix](http://www.information-age.com/cloud-adoption-to-soar-as-businesses-pursue-innovation-idc-predicts-123457322/) | Public | Defunct since September 2013 |
+| [Apache CloudStack](https://cloudstack.apache.org/) | Private | |
+| [Ceph](http://ceph.com/) | Private | |
+| [Cumulus (Nimbus)](https://github.com/nimbusproject/nimbus) | Private | |
+| [Minio](https://github.com/minio/minio) | Private | |
+| [pWalrus](http://www.pdl.cmu.edu/pWalrus/) | Private | Parallel version of Walrus |
+| [Riak Cloud Storage](https://github.com/basho/riak_cs) | Private | |
+| [S3ninja](https://github.com/scireum/s3ninja) | Private | Emulates the S3 API for development and testing purposes |
+| [Swift (OpenStack)](https://github.com/openstack/swift) | Private | |
+| [Walrus (Eucalyptus)](https://github.com/eucalyptus/eucalyptus) | Private | |
 
 Octopus' aim is to support all available S3-compatible services. Support for S3 and Walrus is implemented now.
 
