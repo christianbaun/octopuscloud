@@ -27,19 +27,22 @@ The software is still under development. See the list of already implemented fea
 
 **Web site of Octopus:** [http://cloudoctopus.appspot.com](http://cloudoctopus.appspot.com)
 
+# Publications
+
+- **Octopus - A Redundant Array of Independent Services (RAIS)**. _Christian Baun, Marcel Kunze, Denis Schwab, Tobias Kurze_. Proceedings of the 3rd International Conference on Cloud Computing and Services Science (CLOSER 2013) in Aachen. SCITEPRESS. ISBN: 978-989-8565-52-5, P.321-328
+- [**Redundant Cloud Storage with Octopus**](https://github.com/christianbaun/octopuscloud/blob/master/documents/Octopus_Paper_2011.pdf). _Christian Baun, Marcel Kunze_. This non-published paper from August 2011 summarizes the features and design of Octopus.
+
 # How it works
 
-The paper **Redundant Cloud Storage with Octopus** from August 2011 summarizes the features and design of Octopus.
+Octopus is designed to run inside a PaaS like Google’s [AppEngine](https://appengine.google.com), [AppScale](https://github.com/AppScale/appscale) or [typhoonAE](https://sites.google.com/site/gaeasaframework/typhoonae). One of the benefits of a cloud platform is that the users don’t need to install the software at client side. A drawback is that the files that shall be uploaded to the cloud storage services cannot be cached by Octopus itself because files cannot be stored by the applications inside the PaaS. This causes another drawback of Octopus. All files need to be transferred to each connected storage service. If a user has credentials for three storage services, the file needs to be transferred from the client (browser) to the storage services one after one.
 
-Octopus is designed to run inside a PaaS like Google’s App Engine, AppScale or typhoonAE. One of the benefits of a cloud platform is that the users don’t need to install the software at client side. A drawback is that the files that shall be uploaded to the cloud storage services cannot be cached by Octopus itself because files cannot be stored by the applications inside the PaaS. This causes another drawback of Octopus. All files need to be transferred to each connected storage service. If a user has credentials for three storage services, the file needs to be transferred from the client (browser) to the storage services one after one.
-
-Users can import their credentials to S3 and Walrus services into Octopus. The software checks if a bucket octopus_storage-at-<username> exists. If not, the bucket will be created. The users can upload files - called objects in the S3 world – with one click to the connected storage services into the Octopus bucket.
+Users can import their credentials to S3 and Walrus services into Octopus. The software checks if a bucket **octopus_storage-at-<username>** exists. If not, the bucket will be created. The users can upload files - called objects in the S3 world – with one click to the connected storage services into the Octopus bucket.
 
 S3 and Walrus both store a MD5 checksum for each object. These checksums are transferred automatically when a list of all objects is requested and they allow checking if the objects located at the different storage services are synchronized.
 
 Everytime, a list of objects is requested, Octopus checks if the data is still synchronized across the storage services. Users can erase objects and alter the Access Control List (ACL) of each object.
 
-Octopus is written in Python and JavaScript. The communication with the S3-compatible storage services is done via boto, a Python interface to the Amazon Web Services. The user interface is HTML (generated with Django) and some JavaScript (jQuery).
+Octopus is written in Python and JavaScript. The communication with the S3-compatible storage services is done via boto, a Python interface to the [Amazon Web Services](http://aws.amazon.com/). The user interface is HTML (generated with [Django](https://www.djangoproject.com/)) and some JavaScript ([jQuery](http://jquery.com/)).
 
 # Implemented Features
 
@@ -63,3 +66,4 @@ Octopus is written in Python and JavaScript. The communication with the S3-compa
 - Cumulus does not support uploading objects via POST yet. Maybe future releases have this feature and can be used by Octopus.
 - In S3 and Google Storage, the MD5 checksums is enclosed by double quotes. In Walrus they are not.
 - If no submit button inside a form is used to upload an object into Walrus, some bytes of garbage data is appended to the object.
+-
