@@ -24,11 +24,10 @@ The following table provides some information about some of the existing S3-comp
 | [Swift (OpenStack)](https://github.com/openstack/swift) | Private | |
 | [Walrus (Eucalyptus)](https://github.com/eucalyptus/eucalyptus) | Private | |
 
-Octopus' aim is to support all available S3-compatible services. Support for S3 and Walrus is implemented now.
-
-The software is still under development. See the list of already implemented features.
+Octopus' aim is to support multiple different S3-compatible services. Support for S3 and Walrus is implemented now. See the list of already implemented features.
 
 <!---
+State October 2016: The web site is offline.
 **Web site of Octopus:** [http://cloudoctopus.appspot.com](http://cloudoctopus.appspot.com)
 --> 
 
@@ -71,4 +70,4 @@ Octopus is written in Python and JavaScript. The communication with the S3-compa
 - Cumulus does not support uploading objects via POST yet. Maybe future releases have this feature and can be used by Octopus.
 - In S3 and Google Storage, the MD5 checksums is enclosed by double quotes. In Walrus they are not.
 - If no submit button inside a form is used to upload an object into Walrus, some bytes of garbage data is appended to the object.
--
+
