@@ -2,6 +2,8 @@
 
 The [Octopus](http://cloudoctopus.appspot.com/) is a software service, designed to provide a high-availability cloud-based storage solution.
 
+![Octopus logo](documents/OctopusLogo2.png)
+
 The following table provides some information about some of the existing S3-compatible public cloud service offerings and private cloud service solutions:
 
 | Service | Public/Private Cloud | Note |
@@ -38,7 +40,13 @@ State October 2016: The web site is offline.
 
 # How it works
 
-Octopus is designed to run inside a PaaS like Google’s [AppEngine](https://appengine.google.com), [AppScale](https://github.com/AppScale/appscale) or [typhoonAE](https://sites.google.com/site/gaeasaframework/typhoonae). One of the benefits of a cloud platform is that the users don’t need to install the software at client side. A drawback is that the files that shall be uploaded to the cloud storage services cannot be cached by Octopus itself because files cannot be stored by the applications inside the PaaS. This causes another drawback of Octopus. All files need to be transferred to each connected storage service. If a user has credentials for multiple storage services, the file needs to be transferred from the client (browser) to the storage services one after one.
+Octopus is designed to run inside a PaaS like Google’s [AppEngine](https://appengine.google.com), [AppScale](https://github.com/AppScale/appscale) or [typhoonAE](https://sites.google.com/site/gaeasaframework/typhoonae). 
+
+![Octopus logo](documents/Octopus_Komponenten_lokal2.png)
+
+![Octopus logo](documents/Octopus_Komponenten_nicht_lokal4.png)
+
+One of the benefits of a cloud platform is that the users don’t need to install the software at client side. A drawback is that the files that shall be uploaded to the cloud storage services cannot be cached by Octopus itself because files cannot be stored by the applications inside the PaaS. This causes another drawback of Octopus. All files need to be transferred to each connected storage service. If a user has credentials for multiple storage services, the file needs to be transferred from the client (browser) to the storage services one after one.
 
 Users can import their credentials to S3 and Walrus services into Octopus. The software checks if a bucket **octopus_storage-at-<username>** exists. If not, the bucket will be created. The users can upload files - called objects in the S3 world – with one click to the connected storage services into the Octopus bucket.
 
