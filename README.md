@@ -42,9 +42,7 @@ State October 2016: The web site is offline.
 
 Octopus is designed to run inside a PaaS like Google’s [AppEngine](https://appengine.google.com), [AppScale](https://github.com/AppScale/appscale) or [typhoonAE](https://sites.google.com/site/gaeasaframework/typhoonae). 
 
-![Octopus logo](documents/Octopus_Komponenten_lokal2.png)
-
-![Octopus logo](documents/Octopus_Komponenten_nicht_lokal4.png)
+![Octopus logo](documents/Octopus_deployment_options.png)
 
 One of the benefits of a cloud platform is that the users don’t need to install the software at client side. A drawback is that the files that shall be uploaded to the cloud storage services cannot be cached by Octopus itself because files cannot be stored by the applications inside the PaaS. This causes another drawback of Octopus. All files need to be transferred to each connected storage service. If a user has credentials for multiple storage services, the file needs to be transferred from the client (browser) to the storage services one after one.
 
