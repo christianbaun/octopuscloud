@@ -42,7 +42,7 @@ State October 2016: The web site is offline.
 
 Octopus is designed to run inside a PaaS like Google’s [AppEngine](https://appengine.google.com), [AppScale](https://github.com/AppScale/appscale) or [typhoonAE](https://sites.google.com/site/gaeasaframework/typhoonae). 
 
-![Octopus logo](documents/Octopus_deployment_options.png)
+![Octopus deployment options](documents/Octopus_deployment_options.png)
 
 One of the benefits of a cloud platform is that the users don’t need to install the software at client side. 
 
@@ -50,7 +50,7 @@ The users can import their credentials to S3 and Walrus services into Octopus. O
 
 The following figure shows the steps to upload an object. After the customers login, his client requests (1) the Octopus website with the HTML form and the list of objects. 
 
-![Octopus logo](documents/Octopus_upload_object.png)
+![Octopus object upload](documents/Octopus_upload_object.png)
 
 The object list is requested (2) from the storage services and transferred (3) to Octopus. The synchronicity of the objects is checked (4) by Octopus using checksums. All S3-compatible store a MD5 checksum for each object. These checksums are transferred automatically when a list of objects is requested and they allow to verify if the objects located at the different storage services are synchronized. Any time, when a list of objects is requested, Octopus checks if the objects are still synchronized across the storage services. After the synchronicity check, the web site with the HTML form is transferred (5) to the customers browser. After the customer selected the local file and started the upload with the submit button, the object is transferred (6) to the first storage service. If the upload was successful, a confirmation message is send (7) back to the browser. Step 6 and 7 are repeated for each additional storage service used. 
 
@@ -74,6 +74,9 @@ Octopus is written in Python and JavaScript. The communication with the S3-compa
 - Implementation of automatic repair when check for synchronicity failed.
 - Currently, each user can import credentials for only one Amazon S3 account and a single Walrus Private Cloud storage service.
 - Implement support for Google Blobstore. Objects (called blobs) of max. 2 GB size can be upload into the Blobstore via HTTP POST and then accessed from App Engine applications. Blobstore could be used as a proxy for Octopus to avoid multiple uploads from the browser to the storage services.
+
+![Blobstore as proxy](documents/blobstore_as_proxy.png)
+
 - Google Storage could be used as a proxy for Octopus too because objects inside Google Storage can be accessed from applications running inside the App Engine.
 - Implementation of a RAID-5 mode. Benefits would be that no provider has a full (working) copy of the customers data and if a provider is not operational any more, the customers data is still available.
 
