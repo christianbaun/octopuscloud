@@ -44,13 +44,19 @@ Octopus is designed to run inside a PaaS like Google’s [AppEngine](https://app
 
 ![Octopus logo](documents/Octopus_deployment_options.png)
 
-One of the benefits of a cloud platform is that the users don’t need to install the software at client side. A drawback is that the files that shall be uploaded to the cloud storage services cannot be cached by Octopus itself because files cannot be stored by the applications inside the PaaS. This causes another drawback of Octopus. All files need to be transferred to each connected storage service. If a user has credentials for multiple storage services, the file needs to be transferred from the client (browser) to the storage services one after one.
+One of the benefits of a cloud platform is that the users don’t need to install the software at client side. 
 
-Users can import their credentials to S3 and Walrus services into Octopus. The software checks if a bucket **octopus_storage-at-<username>** exists. If not, the bucket will be created. The users can upload files - called objects in the S3 world – with one click to the connected storage services into the Octopus bucket.
+The users can import their credentials to S3 and Walrus services into Octopus. Octopus checks if a bucket with the naming scheme **octopus_storage-at-<username>** exists. If not, the bucket will be created and the users can upload files - called objects in the S3 world – with one click to the connected storage services into the Octopus bucket. 
 
-S3 and Walrus both store a MD5 checksum for each object. These checksums are transferred automatically when a list of all objects is requested and they allow checking if the objects located at the different storage services are synchronized.
+The following figure shows the steps to upload an object. After the customers login, his client requests (1) the Octopus website with the HTML form and the list of objects. 
 
-Everytime, a list of objects is requested, Octopus checks if the data is still synchronized across the storage services. Users can erase objects and alter the Access Control List (ACL) of each object.
+![Octopus logo](documents/Octopus_upload_object.png)
+
+The object list is requested (2) from the storage services and transferred (3) to Octopus. The synchronicity of the objects is checked (4) by Octopus using checksums. All S3-compatible store a MD5 checksum for each object. These checksums are transferred automatically when a list of objects is requested and they allow to verify if the objects located at the different storage services are synchronized. Any time, when a list of objects is requested, Octopus checks if the objects are still synchronized across the storage services. After the synchronicity check, the web site with the HTML form is transferred (5) to the customers browser. After the customer selected the local file and started the upload with the submit button, the object is transferred (6) to the first storage service. If the upload was successful, a confirmation message is send (7) back to the browser. Step 6 and 7 are repeated for each additional storage service used. 
+
+A drawback of Octopus is that the files that shall be uploaded to the cloud storage services cannot be cached by Octopus itself because files cannot be stored by the applications inside the PaaS. This causes another drawback of Octopus. All files need to be transferred to each connected storage service. If a user has credentials for multiple storage services, the file needs to be transferred from the client (browser) to the storage services one after one.
+
+Because each object is transferred directly from the customers browser to all connected storage services, the amount of data that need to be transferred, increases linear with each additional storage service used. Therefore, the use of multiple storage services leads to disproportionately long transfer times.
 
 Octopus is written in Python and JavaScript. The communication with the S3-compatible storage services is done via boto, a Python interface to the [Amazon Web Services](http://aws.amazon.com/). The user interface is HTML (generated with [Django](https://www.djangoproject.com/)) and some JavaScript ([jQuery](http://jquery.com/)).
 
